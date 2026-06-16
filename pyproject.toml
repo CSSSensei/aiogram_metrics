@@ -1,7 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "aiogram-metrics"
 version = "0.1.0"
+description = "Prometheus metrics middleware for aiogram 3.x bots"
+readme = "README.md"
+license = "MIT"
 requires-python = ">=3.11"
+authors = [
+    { name = "Phasalo" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Framework :: AsyncIO",
+]
 dependencies = [
     "aiogram>=3.28.0",
     "prometheus-client>=0.20.0",
