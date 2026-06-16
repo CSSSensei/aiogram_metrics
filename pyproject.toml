@@ -21,6 +21,9 @@ dependencies = [
     "prometheus-client>=0.20.0",
 ]
 
+[tool.hatch.build.targets.wheel]
+packages = ["aiogram_metrics"]
+
 [dependency-groups]
 dev = [
     "ruff>=0.11.0",
