@@ -1,4 +1,4 @@
-<h1 align="center">aiogram-metrics</h1>
+<h1 align="center">aiogram3-metrics</h1>
 <p align="center">
 <b>Prometheus метрики для aiogram 3.x ботов</b>
 </p>
@@ -17,7 +17,7 @@
 ### Установка
 
 ```bash
-pip install aiogram-metrics
+pip install aiogram3-metrics
 ```
 
 ### Использование
