@@ -13,8 +13,8 @@ def start_metrics_server(port: int) -> None:
     global _server_started
     with _lock:
         if _server_started:
-            logger.warning("metrics server already started, skipping")
+            logger.warning('metrics server already started, skipping')
             return
         start_http_server(port)
         _server_started = True
-        logger.info("metrics server started on port %d", port)
+        logger.info('metrics server started on port %d', port)

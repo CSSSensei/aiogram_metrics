@@ -9,7 +9,7 @@ def test_metrics_server_responds():
     start_metrics_server(port=port)
     time.sleep(0.3)
 
-    response = urllib.request.urlopen(f"http://localhost:{port}/metrics")
+    response = urllib.request.urlopen(f'http://localhost:{port}/metrics')
     assert response.status == 200
     body = response.read().decode()
-    assert "python_info" in body
+    assert 'python_info' in body

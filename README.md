@@ -5,7 +5,7 @@
 
 <p align="center">
 <img src="https://img.shields.io/badge/made%20by-Phasalo-000FFF">
-<img src="https://img.shields.io/badge/version-0.1.0-0000FF">
+<img src="https://img.shields.io/badge/version-0.2.0-0000FF">
 </p>
 
 <p align="center">
@@ -46,6 +46,11 @@ dp.update.outer_middleware(MetricsMiddleware(bot_name="mybot"))
 | `tg_handler_duration_seconds` | Histogram | bot, update_type |
 | `tg_long_polling_lag_seconds` | Histogram | bot |
 | `tg_errors_total` | Counter | bot, update_type, error_type |
+| `tg_commands_total` | Counter | bot, command |
+| `tg_active_users_daily` | Gauge | bot |
+| `tg_active_users_monthly` | Gauge | bot |
+
+Счётчики активных пользователей хранятся in-memory и сбрасываются при рестарте процесса.
 
 ### InstrumentedAiohttpSession
 
@@ -53,6 +58,8 @@ dp.update.outer_middleware(MetricsMiddleware(bot_name="mybot"))
 |---|---|---|
 | `tg_api_call_duration_seconds` | Histogram | bot, method |
 | `tg_api_calls_total` | Counter | bot, method, status |
+| `tg_api_errors_total` | Counter | bot, method, error_type |
+| `tg_bot_blocked_total` | Counter | bot |
 
 ## Тестирование
 
